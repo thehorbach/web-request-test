@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="web_request_test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,66 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="stq-D1-QDi">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
+                                <color key="backgroundColor" red="0.0" green="0.85098039219999999" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAI-s4-pHg">
+                                <rect key="frame" x="20" y="558" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ay7-Ib-DdT"/>
+                                    <constraint firstAttribute="width" constant="70" id="XfX-LE-hCh"/>
+                                </constraints>
+                                <state key="normal" title="Swift"/>
+                                <connections>
+                                    <action selector="onPressedShowSwift:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mDT-Gb-cg7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQH-pb-vzC">
+                                <rect key="frame" x="510" y="558" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="ogV-Ba-cWg"/>
+                                    <constraint firstAttribute="height" constant="30" id="x1T-uk-iU1"/>
+                                </constraints>
+                                <state key="normal" title="Steak"/>
+                                <connections>
+                                    <action selector="onPressedShowSteak:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kiG-aG-Hgj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sO0-lZ-hmE">
+                                <rect key="frame" x="242" y="558" width="117" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TPJ-yi-EHy"/>
+                                    <constraint firstAttribute="width" constant="117" id="Vho-VR-YPY"/>
+                                </constraints>
+                                <state key="normal" title="Cellebrity Gossip"/>
+                                <connections>
+                                    <action selector="onPressedShowGossip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S4C-UY-cRX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="sO0-lZ-hmE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D6e-8S-hw0"/>
+                            <constraint firstItem="stq-D1-QDi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Q9K-bi-NLo"/>
+                            <constraint firstItem="WQH-pb-vzC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="QGr-Tc-LCs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WQH-pb-vzC" secondAttribute="bottom" constant="12" id="auy-eQ-ptQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cAI-s4-pHg" secondAttribute="bottom" constant="12" id="eVe-as-ooe"/>
+                            <constraint firstAttribute="trailing" secondItem="stq-D1-QDi" secondAttribute="trailing" id="gKF-Xx-BKP"/>
+                            <constraint firstItem="stq-D1-QDi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kSo-Oj-UsB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="stq-D1-QDi" secondAttribute="bottom" constant="50" id="mOF-1P-bst"/>
+                            <constraint firstItem="cAI-s4-pHg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vFC-ts-7pD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sO0-lZ-hmE" secondAttribute="bottom" constant="12" id="zlO-ns-yvb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="container" destination="stq-D1-QDi" id="jMl-9W-rgh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="325" y="400"/>
         </scene>
     </scenes>
 </document>
